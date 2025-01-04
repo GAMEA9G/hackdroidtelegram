@@ -100,7 +100,7 @@ async def screenshort(update: Update, context: ContextTypes.DEFAULT_TYPE) -> Non
         await update.message.reply_text('Failed to take screenshot.')
 def main() -> None:
     """Run the bot."""
-    application = Application.builder().token().build()
+    application = Application.builder().token('BotToken').build()
 
     application.add_handler(CommandHandler("you", you))
     application.add_handler(CommandHandler("help", help))
